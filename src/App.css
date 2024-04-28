@@ -1,0 +1,342 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #7B52FF;
+}
+
+.principal-menu-container {
+  height: 50vh;
+  width: 18em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-player-vs-player, .btn-rules {
+  width: 90%;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  gap: 0.5em;
+  border: solid 3px black;
+  box-shadow: 0px 10px 1px black;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.btn-player-vs-player {
+  background: #F3D356;
+}
+
+.btn-rules {
+  background: #EAE1E1;
+}
+
+.rules-modal {
+  background: white;
+  width: 18em;
+  height: 35em;
+  border-radius: 20px;
+  border: solid 3px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1.5em;
+  padding: 30px;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.rules-modal h1 {
+  text-align: center;
+}
+
+.rules-modal .icon-check {
+  width: 20%;
+  position: absolute;
+  bottom: -2em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rules-modal.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.rules-modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.header .game-menu-btn, .header .restart-btn {
+  background: #661FE4;
+  padding: 0.6em;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: white;
+}
+
+.game-menu-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.game-menu-container.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.game-menu-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.game-menu {
+  width: 20em;
+  height: 32em;
+  background: #7B52FF;
+  border: solid 3px black;
+  box-shadow: 0px 10px 1px black;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 10em;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.game-menu h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+}
+
+.game-menu .continue-btn, .game-menu .restart-btn, .game-menu .quit-game-btn{
+  width: 13em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: solid 3px black;
+  box-shadow: 0px 5px 1px black;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+}
+
+.game-menu .continue-btn, .game-menu .restart-btn {
+  background: white;
+  color: black;
+}
+
+.game-menu .quit-game-btn {
+  background: #F565A9;
+  color: white;
+}
+
+.score-modal {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+
+.score-modal .player-one-score, .score-modal .player-two-score {
+  background: white;
+  width: 8.5em;
+  height: 4.5em;
+  border-radius: 15px;
+  border: solid 3px black;
+  box-shadow: 0px 8px 1px black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.score-modal .text {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.score-modal .score {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.score-modal .player-one-score img {
+  position: absolute;
+  left: -1.8em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.score-modal .player-two-score img {
+  position: absolute;
+  right: -1.8em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.board {
+  width: 350px;
+  height: 310px;
+  background: white;
+  border-radius: 20px;
+  border: solid 3px black;
+  box-shadow: 0px 7px 1px black;
+  display: grid;
+  grid-template: repeat(6, 43px) / repeat(7, 42px);
+  gap: 7px 5px;
+  place-content: center;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.board .slot {
+  background: #7B52FF;
+  border-radius: 100%;
+  border: solid 2px black;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.board .slot .piece {
+  position: absolute;
+  animation: drop 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drop {
+  0% {
+    bottom: 10em;
+  }
+  
+  25% {
+    bottom: 0em;
+  }
+  
+  50% {
+    bottom: 0.3em;
+  }
+  
+  100% {
+    bottom: 0em;
+  }
+}
+
+.board .slot .winner-marker {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 100%;
+  position: relative;
+  bottom: 0.25em;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+
+.board .slot .winner-marker:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: black;
+  position: absolute;
+}
+
+.timer-container {
+  width: 197px;
+  height: 165px;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 0.5em;
+  margin: auto;
+}
+
+.timer-container .text {
+  text-transform: uppercase;
+  color: black;
+  z-index: 1;
+}
+
+.timer-container .timer {
+  color: black;
+  font-size: 3em;
+  z-index: 1;
+}
+
+.timer-container img {
+  position: absolute;
+}
+
+.winner-modal, .tie-modal {
+  width: 17.5em;
+  height: 8em;
+  background: white;
+  margin: auto;
+  border-radius: 20px;
+  border: solid 3px black;
+  box-shadow: 0px 8px 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.winner-modal span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.winner-modal strong, .tie-modal strong {
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+
+.winner-modal .play-again-btn, .tie-modal .play-again-btn{
+  display: inline-block;
+  width: 50%;
+  height: 2.5em;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #7B52FF;
+  border-radius: 20px;
+}

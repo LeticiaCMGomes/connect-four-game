@@ -1,0 +1,60 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@10.2.4
+2 info using node@v21.6.2
+3 timing npm:load:whichnode Completed in 9ms
+4 timing config:load:defaults Completed in 14ms
+5 timing config:load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc Completed in 5ms
+6 timing config:load:builtin Completed in 7ms
+7 timing config:load:cli Completed in 15ms
+8 timing config:load:env Completed in 3ms
+9 timing config:load:file:/data/data/com.termux/files/home/connect-four-game/.npmrc Completed in 1ms
+10 timing config:load:project Completed in 15ms
+11 timing config:load:file:/data/data/com.termux/files/home/.npmrc Completed in 14ms
+12 timing config:load:user Completed in 14ms
+13 timing config:load:file:/data/data/com.termux/files/usr/etc/npmrc Completed in 1ms
+14 timing config:load:global Completed in 2ms
+15 timing config:load:setEnvs Completed in 7ms
+16 timing config:load Completed in 84ms
+17 timing npm:load:configload Completed in 85ms
+18 timing config:load:flatten Completed in 19ms
+19 timing npm:load:mkdirpcache Completed in 2ms
+20 timing npm:load:mkdirplogs Completed in 1ms
+21 verbose title npm start
+22 verbose argv "start"
+23 timing npm:load:setTitle Completed in 5ms
+24 timing npm:load:display Completed in 4ms
+25 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2024-04-18T17_15_59_607Z-
+26 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2024-04-18T17_15_59_607Z-debug-0.log
+27 timing npm:load:logFile Completed in 72ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 331ms
+31 silly logfile done cleaning log files
+32 timing command:run-script Completed in 71ms
+33 timing command:start Completed in 146ms
+34 verbose stack Error: Missing script: "start"
+34 verbose stack
+34 verbose stack Did you mean one of these?
+34 verbose stack     npm star # Mark your favorite packages
+34 verbose stack     npm stars # View packages marked as favorites
+34 verbose stack
+34 verbose stack To see a list of scripts, run:
+34 verbose stack   npm run
+34 verbose stack     at RunScript.run (/data/data/com.termux/files/usr/lib/node_modules/npm/lib/commands/run-script.js:94:13)
+34 verbose stack     at async module.exports (/data/data/com.termux/files/usr/lib/node_modules/npm/lib/cli-entry.js:61:5)
+35 verbose cwd /data/data/com.termux/files/home/connect-four-game
+36 verbose Linux 4.19.127-22945975
+37 verbose node v21.6.2
+38 verbose npm  v10.2.4
+39 error Missing script: "start"
+39 error
+39 error Did you mean one of these?
+39 error     npm star # Mark your favorite packages
+39 error     npm stars # View packages marked as favorites
+39 error
+39 error To see a list of scripts, run:
+39 error   npm run
+40 verbose exit 1
+41 timing npm Completed in 947ms
+42 verbose code 1
+43 error A complete log of this run can be found in: /data/data/com.termux/files/home/.npm/_logs/2024-04-18T17_15_59_607Z-debug-0.log
