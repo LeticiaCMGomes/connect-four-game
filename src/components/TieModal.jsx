@@ -7,7 +7,7 @@ const TieModal = () => {
   
   return(
     <div class='tie-modal'>
-      <strong>Tie</strong>
+      <strong>a tie</strong>
       <button class='play-again-btn' onClick={playAgain}>Play Again</button>
     </div>
   )

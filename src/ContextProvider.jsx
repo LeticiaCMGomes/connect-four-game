@@ -54,6 +54,7 @@ const ContextProvider = ({children}) => {
     setBoard(Array(6).fill().map(() => Array(7).fill(null)))
     setTimer(30)
     setWinnerSequence([])
+    setIsTie(false)
   }
   
   const restart = () => {
